@@ -57,7 +57,12 @@ BACKUP DATABASE ToolkitBackupTest TO DISK=N'/var/opt/mssql/data/toolkit-no-check
     foreach ($batch in [regex]::Split($setup, '(?im)^GO\s*\r?$')) {
         if (-not [string]::IsNullOrWhiteSpace($batch)) { Invoke-LabSql $batch }
     }
-    & (Join-Path $PSScriptRoot '../benchmarks/Run-Benchmark.ps1') -Credential $credential -Confirm:$false -Trials 10
+    $benchmarkPath = & (Join-Path $PSScriptRoot '../benchmarks/Run-Benchmark.ps1') -Credential $credential -Confirm:$false -Trials 10
+    $raw = Get-Content (Join-Path $benchmarkPath 'raw.json') -Raw | ConvertFrom-Json
+    Assert-True ($raw.trials.Count -eq 20) 'Missing benchmark trials'
+    foreach ($trial in $raw.trials) {
+        Assert-True (($trial.sql_messages -join "`n") -match "Table 'Workload'") 'STATISTICS IO messages were not drained'
+    }
 } finally {
     # Release idle benchmark sessions before dropping only our disposable lab databases.
     [System.Data.SqlClient.SqlConnection]::ClearAllPools()

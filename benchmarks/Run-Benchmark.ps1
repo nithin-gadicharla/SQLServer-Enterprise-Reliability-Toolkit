@@ -29,6 +29,20 @@ $command = $connection.CreateCommand(); $command.CommandTimeout=120
 $runDirectory = Join-Path $OutputDirectory ([guid]::NewGuid().ToString('N'))
 [void](New-Item -ItemType Directory -Path $runDirectory -Force)
 $results = [System.Collections.Generic.List[object]]::new()
+function Invoke-BenchmarkSample {
+    # Drain the reader so SQL's trailing STATISTICS IO/TIME messages are delivered.
+    $reader = $command.ExecuteReader()
+    $count = $null
+    try {
+        do {
+            while ($reader.Read()) {
+                if ($null -eq $count -and $reader.FieldCount -gt 0) { $count = $reader.GetInt64(0) }
+            }
+        } while ($reader.NextResult())
+    } finally { $reader.Dispose() }
+    if ($null -eq $count) { throw 'Benchmark returned no count result.' }
+    return [long]$count
+}
 try {
     $connection.Open()
     $command.CommandText="SELECT COUNT(*) FROM sys.indexes WHERE object_id=OBJECT_ID(N'dbo.Workload') AND name=N'IX_Workload_bucket';"
@@ -42,12 +56,12 @@ try {
         }
         $command.CommandText='SET STATISTICS IO ON; SET STATISTICS TIME ON; SELECT COUNT_BIG(*) FROM dbo.Workload WHERE bucket = 42 OPTION (MAXDOP 1);'
         # Two warmups per phase; no shared server cache flushing.
-        1..2 | ForEach-Object { [void]$command.ExecuteScalar() }
+        1..2 | ForEach-Object { [void](Invoke-BenchmarkSample) }
         $messages.Clear()
         for ($trial=1; $trial -le $Trials; $trial++) {
             $messages.Clear()
             $watch=[System.Diagnostics.Stopwatch]::StartNew()
-            $count=[long]$command.ExecuteScalar()
+            $count=Invoke-BenchmarkSample
             $watch.Stop()
             if ($count -ne 100) { throw "Unexpected row count: $count" }
             $results.Add([pscustomobject]@{phase=$phase; trial=$trial; elapsed_ms=$watch.Elapsed.TotalMilliseconds; count=$count; sql_messages=@($messages.ToArray())})
