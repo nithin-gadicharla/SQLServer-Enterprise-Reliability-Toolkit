@@ -1,0 +1,6 @@
+reports/
+*.log
+*.bak
+*.trn
+.env
+*.secret
