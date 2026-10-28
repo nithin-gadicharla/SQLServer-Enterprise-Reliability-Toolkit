@@ -9,8 +9,8 @@ jobs:
   static:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: '3.12'
       - run: pip install -r requirements-dev.txt
@@ -23,7 +23,7 @@ jobs:
         os: [ubuntu-24.04, windows-2022]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
       - name: Pester tests
         shell: pwsh
         run: |
@@ -34,7 +34,7 @@ jobs:
   sql2022:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
       - name: Start disposable SQL Server with validated TLS
         shell: bash
         run: |
@@ -49,7 +49,7 @@ jobs:
           printf '[network]\ntlscert = /var/opt/mssql/tls/server.crt\ntlskey = /var/opt/mssql/tls/server.key\nforceencryption = 1\n' > artifacts/tls/mssql.conf
           sudo chown -R 10001:0 artifacts/tls
           sudo chmod 600 artifacts/tls/server.key
-          docker run -d --name toolkit-sql -p 1433:1433 -e ACCEPT_EULA=Y -e MSSQL_PID=Developer -e MSSQL_SA_PASSWORD="$password" -v "$PWD/artifacts/tls:/var/opt/mssql/tls:ro" -v "$PWD/artifacts/tls/mssql.conf:/var/opt/mssql/mssql.conf:ro" mcr.microsoft.com/mssql/server:2022-CU18-ubuntu-22.04
+          docker run -d --name toolkit-sql -p 1433:1433 -e ACCEPT_EULA=Y -e MSSQL_PID=Developer -e MSSQL_SA_PASSWORD="$password" -v "$PWD/artifacts/tls:/var/opt/mssql/tls:ro" -v "$PWD/artifacts/tls/mssql.conf:/var/opt/mssql/mssql.conf:ro" mcr.microsoft.com/mssql/server:2022-CU18-ubuntu-22.04@sha256:ea73825f3d88a23c355ac2f9fdc6bd960fec90171c12c572109b36a558f77bb8
           ready=0
           for attempt in $(seq 1 60); do
             if docker logs toolkit-sql 2>&1 | grep -q 'SQL Server is now ready for client connections'; then ready=1; break; fi
@@ -61,12 +61,19 @@ jobs:
         env:
           TOOLKIT_DISPOSABLE_SQL: '1'
         run: ./tests/Integration.ps1
+      - name: Summarize measured benchmark
+        shell: bash
+        run: |
+          for raw in artifacts/benchmark/*/raw.json; do
+            python benchmarks/summarize.py "$raw" > "$(dirname "$raw")/summary.json"
+          done
       - name: Retain raw synthetic benchmark evidence
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: synthetic-benchmark-${{ github.sha }}
-          path: artifacts/benchmark/*/raw.json
-          if-no-files-found: error
+          path: artifacts/benchmark/*/*.json
+          if-no-files-found: warn
       - name: Remove lab
         if: always()
         shell: bash

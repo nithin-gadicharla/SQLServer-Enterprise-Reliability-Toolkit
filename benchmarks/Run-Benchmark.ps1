@@ -33,7 +33,7 @@ try {
     $connection.Open()
     $command.CommandText="SELECT COUNT(*) FROM sys.indexes WHERE object_id=OBJECT_ID(N'dbo.Workload') AND name=N'IX_Workload_bucket';"
     if ([int]$command.ExecuteScalar() -ne 0) { throw 'Index already exists. Recreate the disposable lab for a valid baseline.' }
-    $command.CommandText="SELECT CONCAT(@@VERSION, CHAR(10), 'rows=', (SELECT COUNT_BIG(*) FROM dbo.Workload));"
+    $command.CommandText="SELECT CONCAT(@@VERSION, CHAR(10), 'rows=', (SELECT COUNT_BIG(*) FROM dbo.Workload), '; cpu_count=', cpu_count, '; physical_memory_kb=', physical_memory_kb) FROM sys.dm_os_sys_info;"
     $environment = [string]$command.ExecuteScalar()
     foreach ($phase in @('before','after')) {
         if ($phase -eq 'after') {

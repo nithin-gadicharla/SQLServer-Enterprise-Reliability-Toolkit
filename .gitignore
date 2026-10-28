@@ -5,3 +5,4 @@ artifacts/
 *.trn
 __pycache__/
 .pytest_cache/
+testResults.xml

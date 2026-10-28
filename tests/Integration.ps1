@@ -24,7 +24,7 @@ $instance = $summary | Where-Object check -eq '01_instance_health.sql'
 $report = Get-Content (Join-Path $run.FullName $instance.report) -Raw | ConvertFrom-Json
 Assert-True ($report.result_sets.Count -eq 4) 'Instance result sets lost'
 Assert-True ($report.result_sets[0].rows[0].product_version) 'Missing instance metadata'
-Write-Output 'SQL Server integration assertions passed. Multi-replica AG and backup media tests are separate manual gates.'
+Write-Output 'SQL Server integration assertions passed. Multi-replica AG and restore drills are separate manual gates.'
 if ($env:TOOLKIT_DISPOSABLE_SQL -ne '1') { throw 'Write tests require TOOLKIT_DISPOSABLE_SQL=1 on the disposable CI lab.' }
 function Invoke-LabSql([string]$Sql) {
     $result = Invoke-ToolkitQuery -Instance 'localhost,1433' -Credential $credential -Sql $Sql -QueryTimeout 120
@@ -59,7 +59,8 @@ BACKUP DATABASE ToolkitBackupTest TO DISK=N'/var/opt/mssql/data/toolkit-no-check
     }
     & (Join-Path $PSScriptRoot '../benchmarks/Run-Benchmark.ps1') -Credential $credential -Confirm:$false -Trials 10
 } finally {
-    # This harness is restricted to the explicitly disposable local CI instance.
+    # Release idle benchmark sessions before dropping only our disposable lab databases.
+    [System.Data.SqlClient.SqlConnection]::ClearAllPools()
     Invoke-LabSql "IF DB_ID(N'ToolkitBackupTest') IS NOT NULL DROP DATABASE ToolkitBackupTest;"
     Invoke-LabSql "IF DB_ID(N'ToolkitBenchmark') IS NOT NULL DROP DATABASE ToolkitBenchmark;"
 }
