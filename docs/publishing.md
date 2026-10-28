@@ -1,12 +1,13 @@
 # Publishing this prepared project
 
-The repository and release are not published merely because this file exists. Use the authenticated GitHub account intended to own the public project, inspect the staged files, and preserve source provenance and existing license notices. Do not overwrite an existing repository with the same name without inspection.
+The public repository is https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit. Release publication is established by the linked GitHub release and successful release workflow, not merely by this file. Use the authenticated GitHub account intended to own the public project, inspect the staged files, and preserve source provenance and existing license notices. Do not overwrite an existing repository with the same name without inspection.
 
 With GitHub CLI authenticated and local Git history established:
 
 ```bash
 gh api user --jq .login
-gh repo create SQLServer-Enterprise-Reliability-Toolkit --public --source . --remote origin --push
+# For a new project only; the repository above already exists.
+# gh repo create SQLServer-Enterprise-Reliability-Toolkit --public --source . --remote origin --push
 ```
 
 If a repository already exists, inspect it and reconcile its history instead. Wait for the validation workflow, examine failed logs, and fix any issues. Then dispatch the release workflow from main:

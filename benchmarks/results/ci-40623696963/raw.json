@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "collected_utc": "2026-10-28T02:55:49.1786979Z",
+  "environment": "Microsoft SQL Server 2022 (RTM-CU18) (KB5050771) - 16.0.4185.3 (X64) \n\tFeb 28 2025 18:24:49 \n\tCopyright (C) 2022 Microsoft Corporation\n\tDeveloper Edition (64-bit) on Linux (Ubuntu 22.04.5 LTS) <X64>\nrows=100000; cpu_count=4; physical_memory_kb=13093888",
+  "runtime": "7.6.9",
+  "os": "Ubuntu 24.04.5 LTS",
+  "trials": [
+    {
+      "phase": "before",
+      "trial": 1,
+      "elapsed_ms": 5.9152,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 2,
+      "elapsed_ms": 4.8176,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 3,
+      "elapsed_ms": 4.5425,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 4,
+      "elapsed_ms": 4.2959,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 5,
+      "elapsed_ms": 4.3106,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 6,
+      "elapsed_ms": 4.353,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 7,
+      "elapsed_ms": 4.4637,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 8,
+      "elapsed_ms": 4.3063,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 9,
+      "elapsed_ms": 4.2186,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 10,
+      "elapsed_ms": 4.2219,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 1,
+      "elapsed_ms": 0.3619,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 2,
+      "elapsed_ms": 0.3056,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 3,
+      "elapsed_ms": 0.2661,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 4,
+      "elapsed_ms": 0.2624,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 5,
+      "elapsed_ms": 0.2458,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 6,
+      "elapsed_ms": 0.3752,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 7,
+      "elapsed_ms": 0.3649,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 8,
+      "elapsed_ms": 0.3609,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 9,
+      "elapsed_ms": 0.3556,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 10,
+      "elapsed_ms": 0.3413,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    }
+  ],
+  "limitations": "Synthetic single-client warm-cache fixed-order experiment; not production throughput or toolkit overhead."
+}

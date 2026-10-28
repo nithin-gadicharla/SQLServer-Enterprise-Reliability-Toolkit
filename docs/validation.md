@@ -1,5 +1,19 @@
 # Validation record
 
+## Hosted validation, 2026-10-27 America/Chicago
+
+[Run 40624040335](https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit/actions/runs/40624040335) passed on source commit 30b70f4ae16734db61bdd77ce467cc204fc07896. All four jobs succeeded: static, PowerShell on Ubuntu, PowerShell on Windows, and SQL Server 2022 integration.
+
+The hosted run executed all five diagnostic batches over certificate-validated TLS, verified heterogeneous/empty result serialization and HADR-disabled behavior, verified a striped checksummed full backup, rejected checksum-free and incomplete stripe media, executed the synthetic before/after benchmark, asserted STATISTICS IO capture for all 20 trials, and removed its disposable lab databases. Windows and Linux each passed all 10 Pester tests; the static job passed all 5 Python tests and SQL parsing.
+
+Measured evidence: [raw trials and summary](../benchmarks/results/ci-40624040335/README.md). It is a synthetic, maintainer-controlled experiment, not independent adoption. No production overhead, RPO/RTO, multi-replica AG, restricted-identity, restore drill, older SQL version, or Azure MI result is established.
+
+Transparent corrections: [first run 40623469140](https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit/actions/runs/40623469140) failed while dropping the benchmark database because an idle pooled connection remained. The harness now clears its pools before teardown. [Run 40623696963](https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit/actions/runs/40623696963) passed, but artifact review found incomplete trailing IO messages from ExecuteScalar. The benchmark now drains a reader and tests message capture; the earlier client-timing data is retained with that limitation.
+
+The first release is a prerelease candidate. Production certification and independent adoption are not asserted. The release workflow revalidates its exact source commit before publishing.
+
+## Earlier local validation
+
 Local validation performed on 2026-10-27 (America/Chicago), using PowerShell 7.4.6 on Linux and SQLFluff 3.4.2. This record describes local execution, not a GitHub Actions run.
 
 | Check | Result | Evidence / scope |
@@ -20,4 +34,4 @@ Local validation performed on 2026-10-27 (America/Chicago), using PowerShell 7.4
 
 Two defects found and fixed during local validation: PowerShell connection-string dictionary keys prevented reaching SQL Server; and the proposed SQLFluff command accepted only one path, so CI now parses the diagnostics and benchmark separately. The original multi-result CSV loss risk and AG remote database-name issue were corrected in the implementation.
 
-First publication should be an explicitly marked prerelease until the live integration job passes. Multi-replica AG, restricted-permission and restore-drill validation remain separate gates before production readiness can be asserted. Link actual hosted CI runs and raw artifact checksums here after execution; do not replace unexecuted statuses with assumptions.
+Hosted SQL 2022 integration has since passed as documented above. First publication remains an explicitly marked prerelease because broader topology and recovery validation is incomplete. Multi-replica AG, restricted-permission and restore-drill validation remain separate gates before production readiness can be asserted. Link actual hosted CI runs and raw artifact checksums here after execution; do not replace unexecuted statuses with assumptions.

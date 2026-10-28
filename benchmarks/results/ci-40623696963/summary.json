@@ -1,0 +1,15 @@
+{
+  "before": {
+    "n": 10,
+    "median_ms": 4.331799999999999,
+    "min_ms": 4.2186,
+    "max_ms": 5.9152
+  },
+  "after": {
+    "n": 10,
+    "median_ms": 0.34845000000000004,
+    "min_ms": 0.2458,
+    "max_ms": 0.3752
+  },
+  "median_reduction_percent": 91.95599981531926
+}

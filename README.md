@@ -2,7 +2,11 @@
 
 Read-only fleet diagnostics for SQL Server, with explicit collection evidence, lossless multi-result JSON reports, opt-in backup verification, and a reproducible lab benchmark.
 
-**Version 0.2.0 — early release candidate.** Derived from the supplied v0.1.0 archive. Production certification, multi-replica AG validation, independent adoption, and performance improvements are not claimed. See [validation status](docs/validation.md).
+**Version 0.2.0 — early release candidate.**
+
+[![validation](https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/nithin-gadicharla/SQLServer-Enterprise-Reliability-Toolkit/actions/workflows/ci.yml)
+
+Derived from the supplied v0.1.0 archive. Production certification, multi-replica AG validation, and independent adoption are not claimed. Synthetic benchmark observations are limited to their documented lab conditions. See [validation status](docs/validation.md).
 
 ## Capabilities
 
@@ -53,7 +57,7 @@ python -m unittest discover -s tests -p 'test_*.py' -v
 python scripts/package.py
 ```
 
-GitHub Actions defines static parsing, Windows/Linux PowerShell tests, and a disposable SQL Server 2022 TLS integration job. Workflows are test definitions until a linked run confirms their results. Release packaging is deterministic for a fixed file tree and produces SHA-256 checksums.
+GitHub Actions defines static parsing, Windows/Linux PowerShell tests, and a disposable SQL Server 2022 TLS integration job. Hosted run evidence and remaining untested scenarios are linked in [validation status](docs/validation.md). Release packaging is deterministic for a fixed file tree and produces SHA-256 checksums.
 
 ## Contribution and impact evidence
 

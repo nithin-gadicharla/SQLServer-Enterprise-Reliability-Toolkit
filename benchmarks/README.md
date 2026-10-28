@@ -1,6 +1,6 @@
 # Reproducible synthetic index experiment
 
-This benchmark demonstrates a repeatable diagnostic method. It does not establish toolkit overhead, production throughput, or a novel indexing algorithm. No measured performance result is included until an actual raw run exists.
+This benchmark demonstrates a repeatable diagnostic method. It does not establish toolkit overhead, production throughput, or a novel indexing algorithm. Measured raw trials and results are available in [ci-40624040335](results/ci-40624040335/README.md), linked to their exact source commit and hosted run. They are synthetic maintainer experiments, not independent adoption.
 
 Use an isolated SQL Server Developer instance with a trusted certificate. `setup.sql` creates the reserved `ToolkitBenchmark` database and 100,000 deterministic rows; it refuses an existing database. Run the script using SSMS or sqlcmd (it contains GO). Do not run it on production. Record source commit, SQL build/edition, CPU/memory/storage, VM/container limits, host load, timezone, client runtime and driver, and certificate configuration.
 

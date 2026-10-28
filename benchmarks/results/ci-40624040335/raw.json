@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "collected_utc": "2026-10-28T02:59:21.9401895Z",
+  "environment": "Microsoft SQL Server 2022 (RTM-CU18) (KB5050771) - 16.0.4185.3 (X64) \n\tFeb 28 2025 18:24:49 \n\tCopyright (C) 2022 Microsoft Corporation\n\tDeveloper Edition (64-bit) on Linux (Ubuntu 22.04.5 LTS) <X64>\nrows=100000; cpu_count=4; physical_memory_kb=13097984",
+  "runtime": "7.6.9",
+  "os": "Ubuntu 24.04.5 LTS",
+  "trials": [
+    {
+      "phase": "before",
+      "trial": 1,
+      "elapsed_ms": 7.5719,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 2,
+      "elapsed_ms": 7.5477,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 7 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 3,
+      "elapsed_ms": 7.4202,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 4,
+      "elapsed_ms": 7.3442,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 7 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 5,
+      "elapsed_ms": 7.2717,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 6,
+      "elapsed_ms": 7.6803,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 7,
+      "elapsed_ms": 7.6609,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 8,
+      "elapsed_ms": 8.2158,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 8 ms,  elapsed time = 7 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 9,
+      "elapsed_ms": 7.5468,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "before",
+      "trial": 10,
+      "elapsed_ms": 7.12,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2714, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 6 ms,  elapsed time = 6 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 1,
+      "elapsed_ms": 0.7195,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 2,
+      "elapsed_ms": 0.7298,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 3,
+      "elapsed_ms": 0.716,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 4,
+      "elapsed_ms": 0.906,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 5,
+      "elapsed_ms": 0.8689,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 6,
+      "elapsed_ms": 3.4856,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 7,
+      "elapsed_ms": 0.8758,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 8,
+      "elapsed_ms": 0.8461,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 1 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 9,
+      "elapsed_ms": 0.8438,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    },
+    {
+      "phase": "after",
+      "trial": 10,
+      "elapsed_ms": 0.8688,
+      "count": 100,
+      "sql_messages": [
+        "SQL Server parse and compile time: \n   CPU time = 0 ms, elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms.",
+        "Table 'Workload'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.",
+        "\n SQL Server Execution Times:\n   CPU time = 0 ms,  elapsed time = 0 ms."
+      ]
+    }
+  ],
+  "limitations": "Synthetic single-client warm-cache fixed-order experiment; not production throughput or toolkit overhead."
+}
