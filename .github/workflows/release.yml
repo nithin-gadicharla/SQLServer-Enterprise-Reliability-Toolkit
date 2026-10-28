@@ -1,0 +1,23 @@
+name: release
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    uses: ./.github/workflows/ci.yml
+  publish:
+    needs: validate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python scripts/package.py
+      - name: Publish first prerelease candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create v0.2.0 artifacts/SQLServer-Enterprise-Reliability-Toolkit-v0.2.0.zip artifacts/SHA256SUMS --target "$GITHUB_SHA" --title 'v0.2.0 — Reliability toolkit release candidate' --notes-file docs/releases/v0.2.0.md --prerelease

@@ -1,0 +1,80 @@
+{
+  "validation_date_local": "2026-10-27",
+  "timezone": "America/Chicago",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "powershell": "7.4.6",
+  "pester": "5.7.1",
+  "sqlfluff": "3.4.2",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "sqlfluff",
+        "parse",
+        "--dialect",
+        "tsql",
+        "sql/",
+        "--format",
+        "none"
+      ],
+      "exit_code": 0,
+      "stdout": "\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "sqlfluff",
+        "parse",
+        "--dialect",
+        "tsql",
+        "benchmarks/setup.sql",
+        "--format",
+        "none"
+      ],
+      "exit_code": 0,
+      "stdout": "\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_known_medians (test_benchmarks.SummaryTests.test_known_medians) ... ok\ntest_no_divide_by_zero (test_benchmarks.SummaryTests.test_no_divide_by_zero) ... ok\ntest_reject_incomplete_or_wrong_result (test_benchmarks.SummaryTests.test_reject_incomplete_or_wrong_result) ... ok\ntest_rejects_nonfinite_times (test_benchmarks.SummaryTests.test_rejects_nonfinite_times) ... ok\ntest_retains_regression (test_benchmarks.SummaryTests.test_retains_regression) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/tmp/toolkit-pwsh/pwsh",
+        "-NoProfile",
+        "-Command",
+        "Import-Module Pester -RequiredVersion 5.7.1; Invoke-Pester -Path tests/Toolkit.Tests.ps1 -CI"
+      ],
+      "exit_code": 0,
+      "stdout": "\nStarting discovery in 1 files.\nDiscovery found 10 tests in 179ms.\nRunning tests.\nWhat if: Performing the operation \"Verify supplied backup media with required checksums\" on target \"invalid\".\n[+] /workspace/scratch/555a4656a7b1/sqlserver-enterprise-reliability-toolkit/tests/Toolkit.Tests.ps1 2.11s (1.62s|357ms)\nTests completed in 2.13s\nTests Passed: 10, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0\n",
+      "stderr": ""
+    }
+  ],
+  "yaml_parse": "passed",
+  "package_reproducibility": "verified separately at delivery by two identical local builds",
+  "not_executed": [
+    "SQL Server live integration",
+    "GitHub Actions",
+    "real backup media",
+    "AG multi-replica",
+    "SQL benchmark",
+    "independent adoption verification"
+  ]
+}

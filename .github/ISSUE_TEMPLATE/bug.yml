@@ -1,0 +1,10 @@
+name: Bug report
+description: Reproducible defect without confidential data
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: Version, environment, reproduction, expected and actual result
+      description: Include sanitized evidence. Never include credentials or production reports.
+    validations:
+      required: true

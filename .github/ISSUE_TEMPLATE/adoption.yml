@@ -1,0 +1,25 @@
+name: Independent adoption report
+description: Voluntary report of actual use, with limitations and evidence
+title: 'Adoption report: '
+body:
+  - type: textarea
+    id: use
+    attributes:
+      label: Actual use and version
+      description: Version or commit, dates, environment, and what you used. Do not include confidential data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Results, limitations, and independent evidence
+      description: Reproduction method, public evidence links, and positive or negative observations. State your relationship to the maintainer.
+    validations:
+      required: true
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Attribution
+      options:
+        - label: I authored this report, describe actual use, and permit linking to this public report. I have removed confidential information.
+          required: true

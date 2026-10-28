@@ -1,6 +1,7 @@
 reports/
-*.log
+artifacts/
+.env
 *.bak
 *.trn
-.env
-*.secret
+__pycache__/
+.pytest_cache/
